@@ -4,22 +4,35 @@ font-family: 'Shadows Into Light', cursive;
  */
 .App {
   text-align: center;
+  
 }
 
+.dashboard {
+  background-image: url('https://images.unsplash.com/photo-1521117184087-0bf82f2385ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8262488e455d8f074262cda8dee11925&auto=format&fit=crop&w=2534&q=80'),
+  linear-gradient(150deg, #21D4FD 0%, #B721FF 55%, #08aeea 55%, #2af598 100%);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+.dashboard span {
+  font-size: 5em;
+  font-family: 'Shadows Into Light', cursive;
+
+}
 .SignInForm {
   font-size: xx-large;
   padding: 5em;
 }
+
 input {
   font-size: 1em;
   font-family: 'Lato', sans-serif;
   text-align: center;
   width: 50%;
 }
-.submit, .logout {
 
-  
-}
 
 button {
   font-size: 1em;
@@ -27,6 +40,7 @@ button {
   width: 50%;
   margin: 1em;
 }
+
 .greenButton {
   background-color: #08AEEA;
   background-image: linear-gradient(34deg, #08AEEA 0%, #2AF598 100%);
@@ -41,14 +55,7 @@ button {
 
 .App-header {
   background-color: #222;
-  color:#27ae60;
-  height: 10em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h2 {
+  color: #27ae60;
   font-size: 5em;
   font-family: 'Shadows Into Light', cursive;
 
@@ -56,10 +63,22 @@ h2 {
 
 
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.gifContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-flow: dense;
+  grid-gap: 2em;
+  margin: 1em;
 }
+
+.gifContainer img {
+  height: 20rem;
+  max-width: 100%;
+  align-self: center;
+  justify-self: center;
+  object-fit: contain;
+}
+
 
 .loader {
   color: #ffffff;
@@ -82,20 +101,25 @@ h2 {
   0% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
+
   5%,
   95% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
+
   10%,
   59% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
   }
+
   20% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
   }
+
   38% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
   }
+
   100% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
@@ -105,20 +129,25 @@ h2 {
   0% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
+
   5%,
   95% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
+
   10%,
   59% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
   }
+
   20% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
   }
+
   38% {
     box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
   }
+
   100% {
     box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
   }
@@ -129,6 +158,7 @@ h2 {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -140,6 +170,7 @@ h2 {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);

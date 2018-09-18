@@ -3,15 +3,20 @@ import {connect} from 'react-redux'
 import {fetchTheGifs} from '../actions'
 
 class GifList extends Component {
-  componentWillMount(){
+  componentDidMount(){
     this.props.dispatch( fetchTheGifs() )
   }
   render(){
     return <div>
-      <h4>{this.props.gifs.length} Gif(s)</h4>
+      <span>
+      {this.props.gifs.length} Gif(s)
+      </span>
+      <div className='gifContainer'>
       {this.props.gifs.map( g => {
         return <img key={g._id} src={g.url} alt= 'oops wheres dat img?' />
       })}
+      </div>
+
     </div>
   }
 }

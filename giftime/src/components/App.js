@@ -11,11 +11,13 @@ class App extends Component {
   render() {
     return (
 
-        <div className="App-intro">
+        <div className='appContainer'>
 
           {this.props.user.username &&
-            <div>
-              <h1>Hiya {this.props.user.username}</h1>
+            <div className='dashboard'>
+              <span>
+                Hiya {this.props.user.username}
+              </span>
               <Logout />
               <GifForm />
               <GifList />

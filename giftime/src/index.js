@@ -65,7 +65,9 @@ ReactDOM.render(<Provider store={store}>
 
   <div className="App">
     <div className="App-header">
-      <h2>Welcome to Giffy</h2>
+      <span>
+        Welcome to Giffy
+      </span>
     </div>
     <BrowserRouter>
       <Switch>
